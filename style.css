@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,900;1,100&family=Varela+Round&display=swap');
+
+body {
+   margin: 0;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background: ffe4e1;
+   font-family: varela round;
+ }
+.myCard {
+   background-color: transparent;
+   width: 250px;
+   height: 330px;
+   perspective: 1000px;
+ }
+ 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img {
+  width: 330px;
+  height: 405px;
+  perspective: 1000px;
+}
+
+.btn {
+  padding-top: 40px;
+  height: 4em;
+  width: 12em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0px solid rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.wrapper {
+  height: 2em;
+  width: 8em;
+  position: relative;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 17px;
+  z-index: 1;
+  color: coral;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: linear-gradient(120deg, hsla(16, 100%, 86%, 0.693) 40%, rgba(255, 218, 204, 0.682) 90%);
+ color: coral;
+  transition: all 0.5s ease;
+}
+
+.flower {
+  display: grid;
+  grid-template-columns: 1em 1em;
+  position: absolute;
+  transition: grid-template-columns 0.8s ease;
+}
+
+.flower1 {
+  top: -11px;
+  left: -17px;
+  transform: rotate(5deg);
+}
+
+.flower2 {
+  bottom: -5px;
+  left: 8px;
+  transform: rotate(35deg);
+}
+
+.flower3 {
+  bottom: -15px;
+  transform: rotate(0deg);
+}
+
+.flower4 {
+  top: -14px;
+  transform: rotate(15deg);
+}
+
+.flower5 {
+  right: 11px;
+  top: -3px;
+  transform: rotate(25deg);
+}
+.flower6 {
+  right: -12px;
+  bottom: -15px;
+  transform: rotate(30deg);
+}
+.flower7 {
+  right: -15px;
+  bottom: 5px;
+  transform: rotate(0deg);
+}
+.flower8 {
+  right: 15px;
+  bottom: -15px;
+  transform: rotate(15deg);
+}
+.flower9 {
+  right: -15px;
+  bottom: -15px;
+  transform: rotate(30deg);
+}
+.flower10 {
+  right: 15px;
+  bottom: -15px;
+  transform: rotate(30deg);
+}
+.flower11 {
+  right: -15px;
+  bottom: 5px;
+  transform: rotate(15deg);
+}
+.flower12 {
+  right: -12px;
+  bottom: -15px;
+  transform: rotate(0deg);
+}
+.flower13 {
+  right: 44px;
+  bottom: -15px;
+  transform: rotate(30deg);
+}
+.flower14 {
+  right: -15px;
+  bottom: 35px;
+  transform: rotate(25deg);
+}
+
+.petal {
+  height: 1em;
+  width: 1em;
+  border-radius: 40% 70% / 7% 90%;
+  background: linear-gradient(120deg, rgb(253, 189, 193) 40%, rgb(255, 229, 220) 90%,
+  rgb(249, 181, 186) 40%, rgb(255, 178, 178) 48%);
+  border: 0.5px solid #ecad96;
+  z-index: 0;
+  transition: width 0.8s ease, height 0.8s ease;
+}
+
+.two {
+  transform: rotate(90deg);
+}
+
+.three {
+  transform: rotate(270deg);
+}
+
+.four {
+  transform: rotate(180deg);
+}
+
+.btn:hover .petal {
+  background: linear-gradient(120deg, rgb(250, 167, 136) 40%, rgb(255, 218, 204) 90%,
+  rgb(216, 107, 67) 40%, rgba(228, 157, 131, 0.603) 48%);
+  border: 0.5px solid #ff7f7f;
+}
+
+.btn:hover .flower {
+  grid-template-columns: 1.5em 1.5em;
+}
+
+.btn:hover .flower .petal {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.btn:hover .text {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.btn:hover div.flower {
+  animation: 15s linear 0s normal none infinite running flower1;
+}
+
+@keyframes flower1 {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(365deg);
+  }
+}
+
+.btn:hover div.flower2 {
+  animation: 13s linear 1s normal none infinite running flower2;
+}
+
+@keyframes flower2 {
+  0% {
+    transform: rotate(35deg);
+  }
+
+  100% {
+    transform: rotate(-325deg);
+  }
+}
+
+.btn:hover div.flower3 {
+  animation: 16s linear 1s normal none infinite running flower3;
+}
+
+@keyframes flower3 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btn:hover div.flower4 {
+  animation: 17s linear 1s normal none infinite running flower4;
+}
+
+@keyframes flower4 {
+  0% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(375deg);
+  }
+}
+
+.btn:hover div.flower5 {
+  animation: 20s linear 1s normal none infinite running flower5;
+}
+
+@keyframes flower5 {
+  0% {
+    transform: rotate(25deg);
+  }
+
+  100% {
+    transform: rotate(-335deg);
+  }
+}
+
+.btn:hover div.flower6 {
+  animation: 15s linear 1s normal none infinite running flower6;
+}
+
+@keyframes flower6 {
+  0% {
+    transform: rotate(30deg);
+  }
+
+  100% {
+    transform: rotate(390deg);
+  }
+}
+
+
+ .title {
+   font-size: 1.6em;
+   text-align: center;
+   margin: 0;
+ }
+
+ .popup {
+   font-size: 1.5em;
+   font-weight: 900;
+   text-align: center;
+   margin: 0;
+  padding-bottom: 2em;
+  padding-top: 1em;
+
+ }
+
+ .popup2 {
+  text-align: center;
+  margin: 0;
+  padding-bottom: 13em;
+  font-weight: 400;
+
+ }
+
+ 
+ .innerCard {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   transition: transform 0.8s;
+   transform-style: preserve-3d;
+   cursor: pointer;
+ }
+ 
+ .myCard:hover .innerCard {
+   transform: rotateY(180deg);
+ }
+ 
+ .frontSide {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+   width: 100%;
+   height: 100%;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+   border-radius: 1rem;
+   color: coral;
+   box-shadow: 0 0 0.3em #f88379;
+   font-weight: 700;
+ }
+ .backSide {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+ }
+
+ .frontSide,
+ .frontSide::before {
+   background: linear-gradient(120deg, #fee4c3 50%, #fed7c8 90%,
+   #ffb79d);
+   color: coral;
+ }
+ 
+ .backSide,
+ .backSide::before {
+  transform: rotateY(180deg);
+ }
+ 
+ .frontSide::before,
+ .backSide::before {
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   content: '';
+   width: 110%;
+   height: 110%;
+   position: absolute;
+   z-index: -1;
+   border-radius: 1em;
+   filter: blur(20px);
+   animation: animate 5s linear infinite;
+ }
+ 
+ @keyframes animate {
+   0% {
+     opacity: 0.3;
+   }
+ 
+   80% {
+     opacity: 1;
+   }
+ 
+   100% {
+     opacity: 0.3;
+   }
+ }
